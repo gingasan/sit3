@@ -2,9 +2,7 @@
 
 This repo serves as the official implementation of ACL 2021 findings paper "[Code Summarization with Strcuture-induced Transformer](https://arxiv.org/pdf/2012.14710.pdf)".
 
-The implementation is based on https://github.com/wasiahmad/NeuralCodeSum.
-
-If you have any questions, free to email me.
+If you have any questions, be free to email me.
 
 ## Dependency
 
@@ -20,7 +18,9 @@ For Python, we follow the pipline in https://github.com/wanyao1992/code_summariz
 
 For Java, we fetch from https://github.com/xing-hu/TL-CodeSum.
 
-In the paper, we write the scripts on our own to parse code into AST. But it is a tough task. We are trying to find a nice way to do so and then experiment under SiT. For just reproducing the results, you can download the data we used directly from [here](https://drive.google.com/file/d/1iVR0WsEs3v9NLKEjBmQnaLuqccK2pyl5/view?usp=sharing) and put both `python` and `java` in the `data` directory.
+In the paper, we write the scripts on our own to parse code into AST. But it is a tough task. We are trying to find a nice way to do so and then experiment under SiT.
+
+For just reproducing the results, you can download the data we used directly from [here](https://drive.google.com/file/d/1iVR0WsEs3v9NLKEjBmQnaLuqccK2pyl5/view?usp=sharing) and put both `python` and `java` in the `data` directory.
 
 The `adjacency` is too large to load on my personal server. So I allocate a guid for each code snippet in `.guid` and retrieve them one by one. What you need to do is:
 
@@ -61,6 +61,8 @@ python test.py --dataset_name python --beam_size 5 --model_name YOUR_MODEL_NAME
 ```
 
 
+
+**Acknowledgement:** The implementation is based on https://github.com/wasiahmad/NeuralCodeSum.
 
 ## Citation
 
