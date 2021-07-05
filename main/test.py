@@ -69,7 +69,7 @@ def add_test_args(parser):
                        help='Preprocessed dev source tag file')
     files.add_argument('--dev_tgt', nargs='+', type=str, default=['test.token.nl'],
                        help='Preprocessed dev target file')
-    files.add_argument('--dev_guid', nargs='+', type=str, default=['valid.token.guid'],
+    files.add_argument('--dev_guid', nargs='+', type=str, default=['test.token.guid'],
                        help='Preprocessed dev guid file')
     files.add_argument('--use_code_struc', type='bool', default=True,
                        help='Use structural information of code')
@@ -396,7 +396,7 @@ def main(args):
     dev_exs = []
     for dev_src, dev_src_tag, dev_tgt, dev_guid, dataset_name in \
             zip(args.dev_src_files, args.dev_src_tag_files,
-                args.dev_tgt_files, args.dev_guid_fiels, args.dataset_name):
+                args.dev_tgt_files, args.dev_guid_files, args.dataset_name):
         dev_files = dict()
         dev_files['src'] = dev_src
         dev_files['src_tag'] = dev_src_tag

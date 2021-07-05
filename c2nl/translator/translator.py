@@ -59,6 +59,7 @@ class Translator(object):
         code_type_rep = batch_inputs['code_type_rep']
         code_mask_rep = batch_inputs['code_mask_rep']
         code_len = batch_inputs['code_len']
+        code_struc_rep = batch_inputs['code_struc_rep']
         source_map = batch_inputs['src_map']
         alignment = batch_inputs['alignment']
         blank = batch_inputs['blank']
@@ -114,7 +115,7 @@ class Translator(object):
                             mode='encoder')
         # memory_bank: B x P x h; enc_states: l*num_directions x B x h
         if model_name == 'Transformer':
-            memory_bank, layer_wise_outputs = encoder(code_rep, code_len)
+            memory_bank, layer_wise_outputs = encoder(code_rep, code_len, code_struc_rep)
             src_lens = code_len.repeat(beam_size)
             dec_states = decoder.init_decoder(src_lens, memory_bank.shape[1])
         else:

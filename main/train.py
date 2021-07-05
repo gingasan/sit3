@@ -54,7 +54,7 @@ def add_train_args(parser):
     runtime = parser.add_argument_group('Environment')
     runtime.add_argument('--data_workers', type=int, default=5,
                          help='Number of subprocesses for data loading')
-    runtime.add_argument('--random_seed', type=int, default=1013,
+    runtime.add_argument('--random_seed', type=int, default=2021,
                          help='Random seed for all numpy/torch/cuda operations for reproducibility')
     runtime.add_argument('--num_epochs', type=int, default=150,
                          help='Train data iterations')

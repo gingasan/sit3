@@ -28,7 +28,7 @@ def vectorize(ex, model):
     if code.mask:
         vectorized_ex['code_mask_rep'] = torch.LongTensor(code.mask)
         vectorized_ex['use_code_mask'] = True
-    if code.ast is not None:
+    if code.struc is not None:
         vectorized_ex['code_struc_rep'] = torch.LongTensor(code.struc)
         vectorized_ex['use_code_struc'] = True
 
