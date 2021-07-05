@@ -31,7 +31,7 @@ unzip adjacency.zip
 
 
 
-## Run
+## Quick Start
 
 **Training**
 
