@@ -60,6 +60,9 @@ In the paper, we run SiT for 150 epochs. For example in Java:
 python test.py --dataset_name python --beam_size 5 --model_name YOUR_MODEL_NAME
 ```
 
+**\*\*Issue\*\***
+
+For Python, we do not follow the original data split in [Wei's paper](https://proceedings.neurips.cc/paper/2019/file/e52ad5c9f751f599492b4f087ed7ecfc-Paper.pdf) and consequently rerun both SiT and Transformer on our split. This is a potential drawback of the paper if comparing to other LSTM baselines. If you want the original split, please refer to https://github.com/GoneZ5/SCRIPT. Thank you.
 
 
 **Acknowledgement:** The implementation is based on https://github.com/wasiahmad/NeuralCodeSum.
